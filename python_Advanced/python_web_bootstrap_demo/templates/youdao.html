@@ -1,0 +1,98 @@
+$def with(query,data,flag)
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 基本表单</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">实验5</a>
+		</div>
+		<div>
+			<ul class="nav navbar-nav" >
+				<li><a href="/">主页</a></li>
+				<li><a href="/calendar.html">日历</a></li>
+				<li class="active"><a href="/fanyi.html">翻译</a></li>
+				<li><a href="/resume.html">简历</a></li>
+				<li><a href="/lol.html">lol</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div style="height:50px"></div>
+
+<div class="row">
+
+	<div class="col-md-3"></div>
+	<div class="col-md-6">
+
+		<div class="row">
+			<form action = "" method="post" enctype="multipart/form-data">
+				<div class="col-md-8">
+					<input type="text" class="form-control" name ="q" value="$:query" />
+				</div>
+				<div class="col-md-4">
+					<button type="submit" class="btn btn-primary"  name="search">查询</button>
+					<button type="submit" class="btn btn-primary"  name = "history">历史</button>
+				</div>
+			</form>
+
+		</div>
+
+		<div style="height:30px"></div>
+
+		<div class="row">
+
+			<div style="height:20px"></div>
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+			
+			$if flag:
+				<h3>翻译结果</h3>
+				<table class="table table-hover" style="font-size:20px">
+				<tbody>
+					$for t in data:
+						<tr>
+							<td>$t[0]</td>
+							<td>$t[1]</td>
+						</tr>
+				</tbody>
+				</table>
+
+			$else:
+				<h3>历史记录</h3>
+				<table class="table table-striped" style="font-size:10px">
+				<tbody>
+					<thead>
+						<th>时间</th>
+						<th>用户</th>
+						<th>单词</th>
+						<th>翻译</th>
+
+					</thead>
+					$for t in data:
+						<tr>
+							<td>$t[0]</td>
+							<td>$t[1]</td>
+							<td>$t[2]</td>
+							<td>$t[3][0:40]</td>
+						</tr>
+				</tbody>
+				</table>
+				
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
