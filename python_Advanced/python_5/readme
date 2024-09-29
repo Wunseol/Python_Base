@@ -1,0 +1,17 @@
+这是python web 项目的传统框架项目
+本项目是我用于学习练手第一个python web 项目
+部分代码参考菜鸟教程Bootstrap
+Bootstrap  ,来自 Twitter。
+Bootstrap 是基于 HTML、CSS、JAVASCRIPT 的，它简洁灵活，使得 Web 开发更加快捷。
+Bootstrap 框架的基础，通过学习这些内容，可以轻松地创建 Web 项目。
+分为 Bootstrap 基本结构、Bootstrap CSS、Bootstrap 布局组件和 Bootstrap 插件几个部分。
+
+1.	理解Bootstrap布局系统
+2.	利用Bootstrap绘制各类前端界面
+3.	掌握Web.py框架,理解前后端参数传递过程
+
+开发1个简易WEB系统,包括主页、查日历、查字典、简历功能
+
+浏览器访问： localhost:8080/
+程序寻找 class index
+
