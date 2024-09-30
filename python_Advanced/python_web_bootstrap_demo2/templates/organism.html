@@ -1,0 +1,130 @@
+$def with(data)
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8"> 
+	<title>实验5</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div style="height:50px"></div>
+
+<div class="row">
+
+	<div  class="col-md-1"></div>
+
+	<div class="col-md-5">
+
+		<div style="height: 30px;"></div>
+
+		<div class="alert alert-success">
+
+			<h1>  <span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp;欢迎进入有机物查询系统</h1>
+
+		</div>
+		
+		<div style="height: 10px;"></div>
+		
+		<div id="myCarousel" class="carousel slide">
+		    <!-- 轮播（Carousel）指标 -->
+		    <ol class="carousel-indicators">
+		        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		        <li data-target="#myCarousel" data-slide-to="1"></li>
+		        <li data-target="#myCarousel" data-slide-to="2"></li>
+		    </ol>   
+		    <!-- 轮播（Carousel）项目 -->
+		    <div class="carousel-inner">
+		        <div class="item active">
+		            <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbpic.51yuansu.com%2Fpic3%2Fcover%2F02%2F34%2F81%2F59c1785a40107_610.jpg&refer=http%3A%2F%2Fbpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1668924449&t=2160a32471c0c3e6799fb59d8ce52117" alt="First slide">
+		        </div>
+		        <div class="item">
+		            <img src="/wp-content/uploads/2014/07/slide2.png" alt="Second slide">
+		        </div>
+		        <div class="item">
+		            <img src="/wp-content/uploads/2014/07/slide3.png" alt="Third slide">
+		        </div>
+		    </div>
+		    <!-- 轮播（Carousel）导航 -->
+		    <a class="carousel-control left" href="#myCarousel" 
+		       data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a>
+		    <a class="carousel-control right" href="#myCarousel" 
+		       data-slide="next">&rsaquo;</a>
+		</div>
+	</div>
+
+	<div class="col-md-5">
+		<div style="height:50px"></div>
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-11">
+				<form action = "" method="post" enctype="multipart/form-data">
+				<div class="row">
+					<div class="col-md-10">
+						<input type="text" class="form-control" name="query" style="width:100%;font-size:20px;height:40px">
+					</div>
+					<div class="col-md-2">
+						<button type="submit" class="btn btn-danger" style="width:100%;font-size:20px;height:40px">查询</button>
+					</div>
+				</div>
+				</form>
+				<div style="height:70px"></div>
+				<div class="row">
+					<div class="panel panel-warning">
+					    <div class="panel-heading">
+					        <h3 class="panel-title">查询结果</h3>
+					    </div>
+					    <div class="panel-body">
+					    	<div class="row">
+						    	<div class="col-md-2">
+						    		 <h1>$data[0][1]</h1>
+						    	</div>
+						        <div class="col-md-8">
+							        <h3><span class="label label-info">$data[0][2]</span>
+							        	<span class="label label-warning">CAS:$data[0][3]</span>
+							        </h3>
+							    </div>
+							</div>
+							<div style="height:20px"></div>
+					        <table class="table table-striped" style="font-size:20px">
+							  <tbody>
+							    <tr>
+							      <td>分子量</td>
+							      <td>$data[0][4]</td>
+							    </tr>
+							    <tr>
+							      <td>熔沸点</td>
+							      <td>$data[0][5]/-$data[0][6]</td>
+							    </tr>
+							    <tr>
+							      <td>密度</td>
+							      <td>$data[0][7]</td>
+							    </tr>
+							    <tr>
+							      <td>折光率</td>
+							      <td>$data[0][8]</td>
+							    </tr>
+							    <tr>
+							      <td>闪点</td>
+							      <td>$data[0][9]</td>
+							    </tr>
+							    <tr>
+							      <td>爆炸极限</td>
+							      <td>$data[0][10]</td>
+							    </tr>
+							  </tbody>
+							</table>
+					    </div>
+					</div>
+				</div>
+
+
+		</div>
+	</div>
+</div>
+	
+</body>
+</html>
