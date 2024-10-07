@@ -1,0 +1,98 @@
+$def with(notice)
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+	<meta charset="utf-8"> 
+	<title>大作业Demo</title>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+<body>
+
+   <h1 style="height:100px"></h1>
+
+<!-- 根据屏幕自动适应自动填充 -->
+   <div class="container">
+   
+      
+   <div class="col-md-7">
+
+      <!-- 轮播模板 -->
+   <div id="myCarousel" class="carousel slide">
+      <!-- 轮播（Carousel）指标 -->
+      <ol class="carousel-indicators">
+         <li data-target="#myCarousel" data-slide-to="0"></li>
+         <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+         <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>   
+      <!-- 轮播（Carousel）项目 -->
+      <div class="carousel-inner">
+         <div class="item active">
+            <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.__BKGJQO02qhEX27Q4kuzwHaEK?w=318&h=180&c=7&r=0&o=5&pid=1.7" alt="First slide">
+            <div class="carousel-caption">lol</div>
+         </div>
+         <div class="item">
+            <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.51sYP5RJimUl4_d_6ZEijwHaEK?w=319&h=180&c=7&r=0&o=5&pid=1.7" alt="Second slide">
+            <div class="carousel-caption">lol</div>
+         </div>
+         <div class="item">
+            <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.SovaYqy-1dr5cRS2oXWJMAHaEK?w=319&h=180&c=7&r=0&o=5&pid=1.7" alt="Third slide">
+            <div class="carousel-caption">lol</div>
+         </div>
+      </div>
+      <!-- 轮播（Carousel）导航 -->
+      <a class="carousel-control left" href="#myCarousel" 
+         data-slide="prev">&lsaquo;</a>
+      <a class="carousel-control right" href="#myCarousel" 
+         data-slide="next">&rsaquo;</a>
+   </div> 
+
+
+   </div>
+      
+      <div class="col-md-2"></div>
+
+   <div class="col-md-4">
+
+      <form action = "" method="post" enctype="multipart/form-data">
+
+         <h1> 用户登录 </h1>
+
+         <input type="text" class="form-control" placeholder="请输入用户名" required autofocus name="username" />
+
+         <h4></h4>
+
+         <input type="password" class="form-control" placeholder="请输入密码" required name="password" />
+
+         <div class="checkbox">
+
+         <button class="btn btn-lg btn-default btn-block" type="submit">登录</button>
+
+         $if notice:
+         <h4 class="text-center" style="color:#ff0000"><b>$notice</b></h4>
+      </form>  
+   </div> 
+   </div> 
+
+</body>
+
+<style>
+
+   body{
+      background-image: url(https://ts1.cn.mm.bing.net/th/id/R-C.f1a95ea062b22c7a12ca2622f227f5a7?rik=dkFCqRP%2fOUdqyw&riu=http%3a%2f%2fimg.netbian.com%2ffile%2f2019%2f1106%2f440869731fef2d1eb2d6e7c8fa6ee1a9.jpg&ehk=68R%2flAEX4Ok4Obru2H63gbyo6LZWI%2ftpAK5proQ1gCc%3d&risl=&pid=ImgRaw&r=0);
+      background-size: cover;
+   }
+
+</style>
+
+</html>
+
+
